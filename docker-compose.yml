@@ -2,6 +2,8 @@ version: "3.8"
 
 services:
   frontend:
+    image: tu_imagen_frontend
+    restart: always
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -14,6 +16,8 @@ services:
       - app_network
 
   backend:
+    image: tu_imagen_backend
+    restart: always
     build:
       context: ./backend
       dockerfile: Dockerfile
